@@ -1,0 +1,33 @@
+server:
+  port: 8888
+  context-path: /git_test
+  #页面热部署
+  jsp-servlet:
+    init-parameters:
+      develoment: true
+      #数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    url:  jdbc:mysql://localhost:3306/my
+    driver-class-name: com.mysql.jdbc.Driver
+    #配置视图解析器
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  #配置post请求中文乱码
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      #配置文件上传解析器
+    multipart:
+      max-file-size: 10mb
+      max-request-size: 100mb
+      #
+#mybatis:
+  #type-aliases-package: com.lq.entity
+  #mapper-locations: com/lq/mapper/*.xml
