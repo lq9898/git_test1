@@ -27,7 +27,7 @@ spring:
     multipart:
       max-file-size: 10mb
       max-request-size: 100mb
-      #
+
 mybatis:
   type-aliases-package: com.lq.entity
   mapper-locations: com/lq/mapper/*.xml
