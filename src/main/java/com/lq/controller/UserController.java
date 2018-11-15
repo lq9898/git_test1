@@ -18,6 +18,9 @@ public class UserController {
         return "redirect:/login.jsp";
     }
 
+
+
+
     @RequestMapping("login")
     public String login(String username, String password) {
         boolean user = userService.login(username, password);
