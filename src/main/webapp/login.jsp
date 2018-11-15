@@ -32,7 +32,7 @@
             <h1>
                 login
             </h1>
-            <form action="emplist.html" method="post">
+            <form action="${pageContext.request.contextPath}/User/login" method="post">
                 <table cellpadding="0" cellspacing="0" border="0"
                        class="form_table">
                     <tr>
@@ -40,7 +40,7 @@
                             username:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="name"/>
+                            <input type="text" class="inputgri" name="username"/>
                         </td>
                     </tr>
                     <tr>
@@ -48,13 +48,15 @@
                             password:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="password" class="inputgri" name="pwd"/>
+                            <input type="password" class="inputgri" name="password"/>
                         </td>
                     </tr>
                 </table>
                 <p>
                     <input type="submit" class="button" value="Submit &raquo;"/>
-                    <input type="button" class="button" onclick="location.href='./regist.html'" value="Regist &raquo;"/>
+                    <input type="button" class="button"
+                           onclick="location.href='${pageContext.request.contextPath}/regist.jsp'"
+                           value="Regist &raquo;"/>
                 </p>
             </form>
         </div>

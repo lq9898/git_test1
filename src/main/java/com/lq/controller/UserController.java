@@ -24,6 +24,9 @@ public class UserController {
     @RequestMapping("login")
     public String login(String username, String password) {
         boolean user = userService.login(username, password);
+        System.out.println("用户名" + username);
+        System.out.println("密码" + password);
+        System.out.println(user);
         if (user) {
             return "redirect:/Emp/findAll";
         }
