@@ -22,9 +22,9 @@ public class UserController {
     public String login(String username, String password) {
         boolean user = userService.login(username, password);
         if (user) {
-            return "";
+            return "redirect:/Emp/findAll";
         }
-        return "login";
+        return "redirect:/login.jsp";
 
     }
 
