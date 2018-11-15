@@ -23,6 +23,7 @@ public class EmpTeste extends AbTest {
         }
     }
 
+
     @Test
     public void insert() {
         User user = new User();
